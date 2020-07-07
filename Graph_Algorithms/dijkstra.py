@@ -1,18 +1,33 @@
+'''
+With Dijkstra, we find the optimal path with lowest cost.
+Time complexity: O(V+Elog(V))
+Approach: We start with a source and keep on finding a neighbour node x such that 
+the path from source node to node x is the shortest path. 
+Once we got such node x, we check all the outgoing edges of x
+to see whether there is a better path from s to some unknown vertex through x, until we reach the target node.
+'''
+
 import heapq
 
 
 def dijkstra(graph, sVertex):
-    # Initially put dist for each vertex in graph as infinity.
+    '''
+    :param graph: Adjacency list representation of graph.
+    :param sVertex: Starting vertex.
+    '''
+    # Initially put distance as infinity and parent as None for each vertex in graph.
     dist = {v: float('inf') for v in graph}
+    parent = {v: None for v in graph}
     # Set the starting vertex distance to zero.
     dist[sVertex] = 0
     # Initialize the priority queue with starting vertex having distance zero.
     p_queue = [(0, sVertex)]
     while len(p_queue):  # While there's some element in p_queue.
-        # Get the current distance and vertex using heappop.
+        # Get the current distance and vertex using heappop from p_queue.
         curr_distance, curr_vertex = heapq.heappop(p_queue)
 
-        # Check if no repetition occur, repetion will be there if current distance to neighbour is greater than the respective value in dist list.
+        # Check if no repetition occur, repetion will be there if current distance to neighbour is greater
+        # than the respective value stored in dist list.
         if curr_distance > dist[curr_vertex]:
             continue
 
@@ -22,19 +37,10 @@ def dijkstra(graph, sVertex):
 
             # Check if the new path is optimised than the earlier ones.
             if distance < dist[neighbour]:
-                # Update the dist for neighbour.
+                # Update the dist and parent list for neighbour.
                 dist[neighbour] = distance
+                parent[neighbour] = curr_vertex
                 # push into p_queue to consider the neighbour for next iteration.
                 heapq.heappush(p_queue, (distance, neighbour))
-    return dist
-
-
-graph = {
-    'A': {'B': 2, 'C': 5, 'D': 1},
-    'B': {'A': 2, 'D': 2, 'C': 3},
-    'C': {'B': 3, 'A': 5, 'D': 3, 'Y': 1, 'Z': 5},
-    'D': {'A': 1, 'B': 2, 'C': 3, 'Y': 1},
-    'E': {'D': 1, 'C': 1, 'Z': 1},
-    'F': {'C': 5, 'Y': 1},
-}
-print(dijkstra(graph, 'D'))
+    print(dist)
+    print(parent)
