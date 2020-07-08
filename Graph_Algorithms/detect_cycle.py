@@ -50,9 +50,8 @@ def print_cycle(s, v, parent):
     print(s)
 
 
-'''
-Uncomment following lines to test the program
-'''
+'''Uncomment following lines to test the program'''
+
 # graph_undirected = {
 #     3: [2, 4, 1],
 #     4: [3, 5],
