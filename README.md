@@ -16,8 +16,9 @@ Various data structures and algorithm codes.
 - [Merge Sort](https://github.com/vashudevdhama/DSA/blob/master/Searching_and_Sorting/merge_sort.py)
 - [Quick Sort](https://github.com/vashudevdhama/DSA/blob/master/Searching_and_Sorting/quick_sort.py)
 
-## Graph Algorithms
+## Graph Theory
 
 - [Breadh First Search](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/breadth_first_search.py)
 - [Depth First Search](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/depth_first_search.py)
+- [Detect Cycle (using DFS)](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/detect_cycle.py)
 - [Dijkstra Algorithm](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/dijkstra.py)
