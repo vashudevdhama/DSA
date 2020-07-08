@@ -27,6 +27,7 @@ def DFS_visit(adj, s, parent):
     '''
     :param adj: Adjacency list represntation of the graph.
     :param s: Current vertex.
+    :param parent: Parent dictionary for the vertices.
     '''
     # Explore all the neighbours of current vertex s.
     for v in adj[s]:
