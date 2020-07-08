@@ -36,11 +36,19 @@ class Graph:
                 current = current.next
             print()
 
-
+# Example graph:
 # (2) <-- (1)*    (5) --> (7)
 #  |       |    /  |    /  |
 #  v       v  /    v  /    v
 # (4)     (3) --> (6) --> (8)
+
+# Adjacency representation of above example graph:
+# 1:  -> 2 -> 3
+# 2:  -> 4
+# 3:  -> 5 -> 6
+# 5:  -> 6 -> 7
+# 6:  -> 7 -> 8
+# 7:  -> 8
 
 
 '''Uncomment following lines to test the code.'''
