@@ -18,7 +18,8 @@ Various data structures and algorithm codes.
 
 ## Graph Theory
 
+- [Adjacency List representation of graph](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/adjacency_list_representation.py)
 - [Breadh First Search](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/breadth_first_search.py)
 - [Depth First Search](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/depth_first_search.py)
-- [Detect Cycle (using DFS)](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/detect_cycle.py)
+- [Detect Cycle in graph (using DFS)](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/detect_cycle.py)
 - [Dijkstra Algorithm](https://github.com/vashudevdhama/DSA/blob/master/Graph_Algorithms/dijkstra.py)
