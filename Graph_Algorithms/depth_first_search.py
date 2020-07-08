@@ -35,4 +35,4 @@ def DFS_visit(adj, s, parent):
             # assign the parent.
             parent[v] = s
             # Recursively call itself to explore furthur deepen paths with v as current node.
-            DFS_visit(adj, v)
+            DFS_visit(adj, v, parent)
